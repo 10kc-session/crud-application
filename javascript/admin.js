@@ -38,7 +38,7 @@ function displayData(students) {
     })
 }
 async function deleteData(id) {
-    let response = await fetch(`http://localhost:3000/students/${id}`, { "method": "DELETE" });
+    let response = await fetch(`https://puzzling-fern-beryl.glitch.me/students/${id}`, { "method": "DELETE" });
     try {
         if (!response.ok) {
             throw new Error(response.statusText);
@@ -55,7 +55,7 @@ async function editData(id) {
     let studentId = document.getElementById("id");
     let name = document.getElementById("name");
     let image = document.getElementById("image");
-    let response = await fetch(`http://localhost:3000/students/${id}`);
+    let response = await fetch(`https://puzzling-fern-beryl.glitch.me/students/${id}`);
     try {
         if (!response.ok) {
             throw new Error(response.statusText);
@@ -81,8 +81,8 @@ async function saveData() {
     }
 
     let studentMethod = studentId ? "PUT" : "POST";
-    let URL = studentId ? `http://localhost:3000/students/${studentId}`
-        : `http://localhost:3000/students/`;
+    let URL = studentId ? `https://puzzling-fern-beryl.glitch.me/students/${studentId}`
+        : `https://puzzling-fern-beryl.glitch.me/students/`;
 
     let response = await fetch(URL, {
         "method": studentMethod,
