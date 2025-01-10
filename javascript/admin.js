@@ -84,6 +84,7 @@ function clearInputs() {
 
 async function deleteData(id) {
     await fetch(`https://puzzling-fern-beryl.glitch.me/students/${id}`, { method: "DELETE" });
+    alert("Data Delete Successfully");
     fetchData();
 }
 
