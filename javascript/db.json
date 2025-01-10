@@ -1,0 +1,14 @@
+{
+  "students": [
+    {
+      "name": "Ramu Prabhas",
+      "img": "https://cdn.britannica.com/79/232779-050-6B0411D7/German-Shepherd-dog-Alsatian.jpg",
+      "id": "1"
+    },
+    {
+      "name": "Vijay Kumar",
+      "img": "https://cdn.georgeinstitute.org/sites/default/files/2021-07/snakes-the-ecosystem-banner.jpg",
+      "id": "5029"
+    }
+  ]
+}
