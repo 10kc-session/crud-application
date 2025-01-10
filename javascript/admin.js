@@ -80,10 +80,15 @@ function clearInputs() {
     document.getElementById("id").value = "";
     document.getElementById("name").value = "";
     document.getElementById("image").value = "";
+    let nameMessage = document.getElementById("name");
+    let imageMessage = document.getElementById("image");
+     nameMessage.style.outline = "none"
+        imageMessage.style.outline = "none"
 }
 
 async function deleteData(id) {
     await fetch(`https://puzzling-fern-beryl.glitch.me/students/${id}`, { method: "DELETE" });
+    clearInputs();
     alert("Data Delete Successfully");
     fetchData();
 }
