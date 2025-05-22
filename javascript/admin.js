@@ -7,10 +7,10 @@ async function fetchData() {
         let response = await fetch("https://puzzling-fern-beryl.glitch.me/students");
         let students = await response.json();
         tableBody.innerHTML = '';
-        students.forEach(student => {
+        students.forEach((student , index) => {
             let row = document.createElement("tr");
             row.innerHTML = `
-                        <td>${student.id}</td>
+                        <td>${index + 1}</td>
                         <td><img src="${student.img}" alt="${student.name}"></td>
                         <td>${student.name}</td>
                         <td>
